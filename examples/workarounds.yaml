@@ -1,0 +1,11 @@
+# Copy to ~/.config/workarounds.yaml.
+# Delete an entry once you've reverted the workaround; until then it keeps notifying.
+
+- name: FreeCAD OVP invisible text
+  when: { pkg: qt6-base, ge: 6.12.1 }
+  desc: >
+    Remove ~/.local/share/FreeCAD/v1-1/Gui/Stylesheets/FreeCAD.qss
+    and check that text in the sketcher dimension box is visible.
+  see:
+    - https://github.com/FreeCAD/FreeCAD/issues/33676
+    - https://qt-project.atlassian.net/browse/QTBUG-151308

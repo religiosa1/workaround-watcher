@@ -1,0 +1,6 @@
+[Unit]
+Description=Check whether temporary workarounds can be reverted
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/workaround-watcher

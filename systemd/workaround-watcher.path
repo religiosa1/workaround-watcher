@@ -1,0 +1,9 @@
+[Unit]
+Description=Workaround check after pacman transactions
+
+[Path]
+# pacman adds/removes a directory here for every installed/upgraded/removed package.
+PathChanged=/var/lib/pacman/local
+
+[Install]
+WantedBy=default.target
